@@ -28,6 +28,21 @@ fi
 # DEFINE ALL COMMON FONCTIONS
 #=================================================
 
+get_source() {
+    if [ "$architecture" = 'x86-64' ]
+then
+    wget -O gitea https://dl.gitea.io/gitea/1.4.2/gitea-1.4.2-linux-amd64 $final_path
+fi
+    if [ "$architecture" = 'x86' ]
+then
+    wget -O gitea https://dl.gitea.io/gitea/1.4.2/gitea-1.4.2-linux-386 $final_path
+fi
+    if [ "$architecture" = 'arm' ]
+then
+    wget -O gitea https://dl.gitea.io/gitea/1.4.2/gitea-1.4.2-linux-arm-7 $final_path
+fi
+}
+
 create_dir() {
     mkdir -p "$final_path/data"
     mkdir -p "$final_path/custom/conf"
