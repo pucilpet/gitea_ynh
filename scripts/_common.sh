@@ -33,7 +33,7 @@ get_source() {
 then
     wget -O gitea https://dl.gitea.io/gitea/1.4.2/gitea-1.4.2-linux-amd64 $final_path
 fi
-    if [ "$architecture" = 'x86' ]
+    if [ "$architecture" = 'i386' ]
 then
     wget -O gitea https://dl.gitea.io/gitea/1.4.2/gitea-1.4.2-linux-386 $final_path
 fi
